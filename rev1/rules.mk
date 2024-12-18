@@ -1,12 +1,12 @@
 BOOTMAGIC_ENABLE = no       # Enable Bootmagic Lite
 MOUSEKEY_ENABLE = yes       # Mouse keys
 EXTRAKEY_ENABLE = yes       # Audio control and System control
-CONSOLE_ENABLE = yes         # Console for debug
+CONSOLE_ENABLE = no         # Console for debug
 COMMAND_ENABLE = no         # Commands for debug and configuration
 NKRO_ENABLE = yes           # Enable N-Key Rollover
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = yes       # Enable keyboard RGB underglow
-WS2812_DRIVER = vendor      # Let me try the PIO driver
+WS2812_DRIVER = vendor      # Let me try the PIO driver available to RP2040
 AUDIO_ENABLE = no           # Audio output
 SPLIT_KEYBOARD = yes
 ENCODER_ENABLE = yes        # Enables the use of one or more encoders

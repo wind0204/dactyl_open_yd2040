@@ -1,21 +1,5 @@
-/*
-Copyright 2012 Jun Wako <wakojun@gmail.com>
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 #pragma once
+
 
 
 
@@ -59,15 +43,24 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* UART */
 // Use UART0 for communication between the halves
-//#define SERIAL_USART_DRIVER SD1
 #define SERIAL_USART_DRIVER SIOD0
-//#define SERIAL_USART_DRIVER SIOD1
 #define SERIAL_USART_FULL_DUPLEX   // Enable full duplex operation mode.
 #define SERIAL_USART_TX_PIN GP0    // USART TX pin
 #define SERIAL_USART_RX_PIN GP1    // USART RX pin
 //#define UART_DRIVER SIOD0
 //#define UART_TX_PIN GP0
 //#define UART_RX_PIN GP1
+
+
+/* USB */
+// Determine who is master and who is slave using a GPIO pin
+// I'm gonna connect a voltage divider circuit to GP22 and V+(Vout)
+
+//#define USB_VBUS_PIN GP22
+// My voltage divider circuit experiment somehow failed!
+// back to the default behavior for now. (SPLIT_USB_DETECT)
+
+
 
 
 /* Rotary Encoders */
@@ -82,10 +75,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ENCODER_RESOLUTION 4
 
 
-/* USB */
-// Determine who is master and who is slave using a GPIO pin
-// I'm gonna connect a voltage divider circuit to GP22 and V+(Vout)
-#define USB_VBUS_PIN GP22
 
 // CRC8 on USB interfacing
 #define CRC8_USE_TABLE
@@ -110,7 +99,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 //#define RGBLIGHT_SPLIT  // Mirror the RGBs? No thanks.
 #define RGBLIGHT_LIMIT_VAL 254
-#define RGBLIGHT_DEFAULT_VAL ( 254 / 2 )
+#define RGBLIGHT_DEFAULT_VAL ( 254 / 4 )
 
 // Don't turn off lights when host goes to sleep.
 #undef RGBLIGHT_SLEEP
