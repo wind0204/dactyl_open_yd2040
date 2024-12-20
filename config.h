@@ -87,7 +87,7 @@
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP25
 
 
-/* YD-RP2040-2022 V1.1 has one WS2812, So I get 2 RGB LEDs from both split halfs. */
+/* YD-RP2040-2022 V1.1 has one WS2812, So I get 2 RGB LEDs in total from both split halves. */
 #define WS2812_DI_PIN GP23
 
 // If the color is wrong I have to try other byte order for the XL-5050RGBC-WS2812B
