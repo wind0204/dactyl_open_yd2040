@@ -84,7 +84,12 @@
 
 
 // CRC8 on USB interfacing
-#define CRC8_OPTIMIZE_SPEED
+#define CRC8_OPTIMIZE_SPEED  // Disabling this won't fix the bug where the keyboard keeps
+                             // old states of system LEDs even when it has sent an LED
+                             // state change event to the host system, until an LED state
+                             // change event occurs on the host system. FIXME
+                             // The bug occurs once in tens of LED state changes but not
+                             // really hard to reproduce.
 //#define CRC8_USE_TABLE  // This dirsrupts the RPC calls on YD2040
 
 
