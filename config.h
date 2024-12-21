@@ -37,8 +37,11 @@
 
 
 /* Synchronize */
-#define SPLIT_LAYER_STATE_ENABLE  // Not sure if there is a need to share layer state yet
-#define SPLIT_LED_STATE_ENABLE  // Not sure if there is a need to share host LED status (caps lock, num lock, etc)
+#define SPLIT_LED_STATE_ENABLE  // The firmware on slave does call layer_state_set_kb without this.
+#undef SPLIT_LED_STATE_ENABLE  // So it's not useful my keyboard.
+
+#define SPLIT_LAYER_STATE_ENABLE  // This won't make slave respond to led state changes and write high for the LED accordingly.
+#undef SPLIT_LAYER_STATE_ENABLE  // So it's not useful my keyboard.
 
 
 /* UART */
@@ -54,12 +57,16 @@
 
 /* USB */
 // Determine who is master and who is slave using a GPIO pin
-// I'm gonna connect a voltage divider circuit to GP22 and V+(Vout)
-
+// I've connected a voltage divider circuit to GP22, V+(Vout) and GND
 //#define USB_VBUS_PIN GP22
-// My voltage divider circuit experiment somehow failed!
-// back to the default behavior for now. (SPLIT_USB_DETECT)
+// XXX My voltage divider circuit experiment somehow failed!
+// Use the default behavior for now.. (SPLIT_USB_DETECT)
+#define SPLIT_WATCHDOG_ENABLE
+#define SPLIT_WATCHDOG_TIMEOUT 2048
 
+
+/* TRANSACTIONS */
+#define SPLIT_TRANSACTION_IDS_KB RPC_ID_SHORT_CRY
 
 
 
@@ -77,8 +84,8 @@
 
 
 // CRC8 on USB interfacing
-#define CRC8_USE_TABLE
 #define CRC8_OPTIMIZE_SPEED
+//#define CRC8_USE_TABLE  // This dirsrupts the RPC calls on YD2040
 
 
 /* Let me try entering the bootloader by double tapping something */
@@ -99,7 +106,7 @@
 
 //#define RGBLIGHT_SPLIT  // Mirror the RGBs? No thanks.
 #define RGBLIGHT_LIMIT_VAL 254
-#define RGBLIGHT_DEFAULT_VAL ( 254 / 4 )
+#define RGBLIGHT_DEFAULT_VAL ( 254 / 2 )
 
 // Don't turn off lights when host goes to sleep.
 #undef RGBLIGHT_SLEEP
@@ -112,7 +119,7 @@
 #define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_BREATHING + 3
 
 #define RGBLIGHT_EFFECT_BREATHING
-#define RGBLIGHT_EFFECT_BREATHE_MAX ( RGBLIGHT_DEFAULT_VAL / 4 * 3 )
+#define RGBLIGHT_EFFECT_BREATHE_MAX ( RGBLIGHT_DEFAULT_VAL / 8 * 5 )
 #define RGBLIGHT_EFFECT_BREATHE_CENTER 2.7  // Valid values are 1.0 to 2.7
 // RGBLED_BREATHING_INTERVALS is defined in keymap.c
 
