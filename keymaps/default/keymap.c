@@ -13,7 +13,8 @@ tap_dance_action_t tap_dance_actions[] = {
 };
 
 // How long (in milliseconds) to wait between animation steps for
-// the "Solid color breathing" animations. I think I'm using the last one now.
+// the "Solid color breathing" animations. I guess I'm using the last one now
+// because I wrote `#define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_BREATHING + 3`
 const uint8_t RGBLED_BREATHING_INTERVALS[] PROGMEM = {16, 8, 4, 2};
 
 
