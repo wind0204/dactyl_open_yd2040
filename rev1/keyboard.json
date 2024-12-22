@@ -10,6 +10,11 @@
         "cols": ["GP10", "GP7", "GP6", "GP5", "GP4", "GP3", "GP2"],
         "rows": ["GP20", "GP19", "GP18", "GP17", "GP16", "GP15"]
     },
+    "usb": {
+      "device_version": "0.0.1",
+      "pid": "0xFFFE",
+      "vid": "0x15F4"
+    },
     "encoder": {
         "rotary": [
             {"pin_a": "GP14", "pin_b": "GP13"}

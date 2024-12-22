@@ -4,9 +4,13 @@
 
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0x15F4  // This ID is registered for 'Computer & Entertainment, Inc.'
-#define PRODUCT_ID      0xFFFE  // Can I use `0xFFFF - 1`?
-#define DEVICE_VER      0x0001  // Is this 0.0.1 ? or just 1?
+
+// QMK compiler warns that these are deprecated in favor of the usb field in info.json
+// and will be removed at a later date
+//#define VENDOR_ID       0x15F4  // This ID is registered for 'Computer & Entertainment, Inc.'
+//#define PRODUCT_ID      0xFFFE  // Can I use `0xFFFF - 1`?
+//#define DEVICE_VER      0x0001  // = 0.01
+
 
 
 /* The key matrix */
@@ -109,7 +113,7 @@
 
 //#define RGBLIGHT_SPLIT  // Mirror the RGBs? No thanks.
 #define RGBLIGHT_LIMIT_VAL 254
-#define RGBLIGHT_DEFAULT_VAL ( 254 / 2 )
+#define RGBLIGHT_DEFAULT_VAL 127
 
 // Don't turn off lights when host goes to sleep.
 #undef RGBLIGHT_SLEEP
