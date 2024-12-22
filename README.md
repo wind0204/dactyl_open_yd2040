@@ -1,5 +1,5 @@
 # Dactyl Open - YD2040
-I've built a Dactyl Pivot - Open with bigger build, movable thumb pads, and bolts as guide for the tenting feature.
+I've built a Dactyl Pivot - Open with bigger build, movable thumb racks, and bolt-screw guides for the tenting feature.
 and thought I might as well share some of the details on the internet.
 
 The MCUs I used was good value, I guess. I don't have electronic knowledge to really evaluate it well. its name was YD-2040 V1.1;
@@ -17,3 +17,5 @@ One tileboard on each thumb rack had to be ground on two sides; One side to make
 ![not_three_sides_but_just_two](https://github.com/user-attachments/assets/db0d4721-90eb-4994-965c-5756440e5207)
 
 On qmk firmware, I made the keyboard emit a blue animated light on the right half whenever numlock is on, and a green animated light on the left half whenever capslock is on using the single WS2812 on YD2040 V1.1; I also made the keyboard write high on the blue LED on the left YD2040 whenever SECOND_LAYER is active and on the right YD2040 whenever NKRO is off.
+
+The minimum cost for such a project without taking into consideration the tools like solder, multimeter, crimper, etc.: https://docs.google.com/spreadsheets/d/1aFUHoXlercC7e-SuZfpWUTReEQ5fsc-MYpa9vlSZMmo/edit?usp=sharing
