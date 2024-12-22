@@ -16,7 +16,9 @@
 
 #pragma once
 
-//#define HAL_USE_SERIAL TRUE
+// Don't use the easy-to-setup flexible PIO for your serial connection, but SIO
+// The documentation of qmk says the SIO driver on RP2040 don't support
+// half-duplex serial connection but that's okay since I'm going with full-duplex
 #define HAL_USE_SIO TRUE
 
 #include_next <halconf.h>

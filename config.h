@@ -16,8 +16,9 @@
 //#define MATRIX_ROWS ( NR_ROWS * 2 )
 //#define MATRIX_COL_PINS { GP10, GP7, GP6, GP5, GP4, GP3, GP2 }
 //#define MATRIX_ROW_PINS { GP20, GP19, GP18, GP17, GP16, GP15 }
+//#define DIODE_DIRECTION COL2ROW
+// These lines have been moved to info.json
 
-#define DIODE_DIRECTION COL2ROW
 
 
 /* Handedness */
@@ -36,12 +37,14 @@
 //  qmk flash -kb handwired/wind0204/dactyl_open_yd2040 -km default -bl uf2-split-right
 
 
+
 /* Synchronize */
 #define SPLIT_LED_STATE_ENABLE  // The firmware on slave does call layer_state_set_kb without this.
 #undef SPLIT_LED_STATE_ENABLE  // So it's not useful my keyboard.
 
 #define SPLIT_LAYER_STATE_ENABLE  // This won't make slave respond to led state changes and write high for the LED accordingly.
 #undef SPLIT_LAYER_STATE_ENABLE  // So it's not useful my keyboard.
+
 
 
 /* UART */
@@ -53,6 +56,7 @@
 //#define UART_DRIVER SIOD0
 //#define UART_TX_PIN GP0
 //#define UART_RX_PIN GP1
+
 
 
 /* USB */
@@ -72,25 +76,17 @@
 
 /* Rotary Encoders */
 // I had to remove these two lines below to avoid conflicts with auto-generated empty ENCODERS_PAD_A definition.
-// Trying one more time
 //#define ENCODERS_PAD_A { GP14 }
 //#define ENCODERS_PAD_B { GP13 }
 
-#undef ENCODER_DIRECTION_FLIP
-
-// This might be too quick.
 #define ENCODER_RESOLUTION 4
 
 
 
-// CRC8 on USB interfacing
-#define CRC8_OPTIMIZE_SPEED  // Disabling this won't fix the bug where the keyboard keeps
-                             // old states of system LEDs even when it has sent an LED
-                             // state change event to the host system, until an LED state
-                             // change event occurs on the host system. FIXME
-                             // The bug occurs once in tens of LED state changes but not
-                             // really hard to reproduce.
-//#define CRC8_USE_TABLE  // This dirsrupts the RPC calls on YD2040
+/* CRC8 */
+#define CRC8_OPTIMIZE_SPEED  // Use bigger memory operands if available hoping for faster CRC runs.
+//#define CRC8_USE_TABLE  // This dirsrupts the RPC on YD2040
+
 
 
 /* Let me try entering the bootloader by double tapping something */
@@ -99,7 +95,9 @@
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP25
 
 
-/* YD-RP2040-2022 V1.1 has one WS2812, So I get 2 RGB LEDs in total from both split halves. */
+
+/* RGB */
+// YD-RP2040-2022 V1.1 has one WS2812, So I get 2 RGB LEDs in total from both split halves.
 #define WS2812_DI_PIN GP23
 
 // If the color is wrong I have to try other byte order for the XL-5050RGBC-WS2812B
@@ -129,4 +127,6 @@
 // RGBLED_BREATHING_INTERVALS is defined in keymap.c
 
 
-#define TAPPING_TERM 175
+
+/* Tap Dance */
+#define TAPPING_TERM 175  // hyper velocity!

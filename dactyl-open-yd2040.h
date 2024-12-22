@@ -29,7 +29,7 @@ struct short_cry_m2s {
   uint16_t the_value;
 };
 struct short_cry_s2m {
-  uint8_t err_no;
+  uint8_t err_no;  // 0 if there is no error
 };
 
 

@@ -12,11 +12,11 @@ tap_dance_action_t tap_dance_actions[] = {
   [TD_RCTL_L2] = ACTION_TAP_DANCE_LAYER_TOGGLE(KC_RCTL, SECOND_LAYER),
 };
 
-// How long (in milliseconds) to wait between animation steps for each of the "Solid color breathing" animations
+// How long (in milliseconds) to wait between animation steps for
+// the "Solid color breathing" animations. I think I'm using the last one now.
 const uint8_t RGBLED_BREATHING_INTERVALS[] PROGMEM = {16, 8, 4, 2};
 
 
-//#define TAPPING_TOGGLE 2
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
