@@ -43,8 +43,14 @@
 
 
 /* Synchronize */
-#define SPLIT_LED_STATE_ENABLE  // The firmware on slave does call layer_state_set_kb without this.
-#undef SPLIT_LED_STATE_ENABLE  // So it's not useful my keyboard.
+
+// I thought..
+#define SPLIT_LED_STATE_ENABLE  // "The firmware on slave does call layer_state_set_kb without this"
+//#undef SPLIT_LED_STATE_ENABLE  // "So it's not useful for my keyboard."
+// And then one day RGB light animation stops working on slave and not defining
+// CRC8_USE_TABLE stops being a charm to prevent slave from becoming unresponsive
+// when master has sent an RPC; ...And commenting out #undef SPLIT_LED_STATE_ENABLE
+// fixes both of the problems. I guess the bugs are coming from a hardware/soldering defect?
 
 #define SPLIT_LAYER_STATE_ENABLE  // This won't make slave respond to led state changes and write high for the LED accordingly.
 #undef SPLIT_LAYER_STATE_ENABLE  // So it's not useful my keyboard.
@@ -89,7 +95,7 @@
 
 /* CRC8 */
 #define CRC8_OPTIMIZE_SPEED  // Use bigger memory operands if available hoping for faster CRC runs.
-//#define CRC8_USE_TABLE  // This dirsrupts the RPC on YD2040
+#define CRC8_USE_TABLE  // This for some reason has disrupted the RPC on YD2040 for a couple of days..
 
 
 
@@ -108,7 +114,7 @@
 //#define WS2812_BYTE_ORDER WS2812_BYTE_ORDER_RGB
 //#define WS2812_BYTE_ORDER WS2812_BYTE_ORDER_BGR
 
-#define RGBLIGHT_LED_COUNT 2
+#define RGBLIGHT_LED_COUNT 1  // one WS2812 on each YD2040
 //#define RGBLED_SPLIT {1, 1}  // Reason for commenting out: This applies RGBLIGHT_SPLIT
 
 //#define RGBLIGHT_SPLIT  // Mirror the RGBs? No thanks.
