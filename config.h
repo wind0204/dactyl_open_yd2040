@@ -45,7 +45,7 @@
 /* Synchronize */
 
 // I thought..
-#define SPLIT_LED_STATE_ENABLE  // "The firmware on slave does call layer_state_set_kb without this"
+#define SPLIT_LED_STATE_ENABLE  // "The firmware on slave does call layer_update_kb without this"
 //#undef SPLIT_LED_STATE_ENABLE  // "So it's not useful for my keyboard."
 // And then one day RGB light animation stops working on slave and not defining
 // CRC8_USE_TABLE stops being a charm to prevent slave from becoming unresponsive
