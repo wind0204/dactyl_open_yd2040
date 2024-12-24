@@ -184,9 +184,9 @@ void refresh_system_led_states( led_t led_state ) {
       rgblight_enable_noeeprom();
     rgblight_sethsv_noeeprom(HSV_GREEN);
 
-  } else {
-    // is it the right half?
-    if ( !led_state.num_lock ) {
+  } else {  // is it the right half?
+    // Let's light up when numpad is not being a numpad
+    if ( led_state.num_lock ) {
       if ( rgblight_is_enabled() )
         rgblight_disable_noeeprom();
       return;
