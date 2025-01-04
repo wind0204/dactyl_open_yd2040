@@ -7,7 +7,7 @@ And the firmware I used was [qmk](https://github.com/qmk/qmk_firmware)
 
 [YD-2040-2022-V1.1-SCH.pdf](https://github.com/user-attachments/files/18221666/YD-2040-2022-V1.1-SCH.pdf)
 ![YD-2040-2022-V1 1-pinout](https://github.com/user-attachments/assets/6883a729-a481-4f7f-ba5c-ac5f1cfcbeca)
-![rough_sketch-keeb](https://github.com/user-attachments/assets/98f7b280-ba3f-4c0e-90d6-2f0516f1632d)
+![rough_sketch](https://github.com/user-attachments/assets/957aa809-f999-479f-b7f8-d094a4700436) Warning: The BAT54C is very tiny. I somehow managed to pull it off without a proper magnifier and holding the board well.
 [pictures and some backstories](https://newsie.social/@Dewry/113452166034299283)
 
 Most of the inspiration and resources came from [this](https://www.printables.com/model/102789-dactyl-flex-w-threaded-tenting), I borrowed a couple of 3d models from it and I also built a few other 3d models via [Dactyl-Pivot](https://github.com/chenfucn/dactyl-pivot) with a bit of modification and then carved them all to attach different parts like the RJ10 module, [Altana](https://github.com/swanmatch/MxLEDBitPCB), the rotary encoder and YD2040.
