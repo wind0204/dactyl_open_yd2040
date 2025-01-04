@@ -72,11 +72,11 @@
 /* USB */
 // Determine who is master and who is slave using a GPIO pin
 // I've connected a voltage divider circuit to GP22, V+(Vout) and GND
-//#define USB_VBUS_PIN GP22
+#define USB_VBUS_PIN GP22
 // XXX My voltage divider circuit experiment somehow failed!
 // Use the default behavior for now.. (SPLIT_USB_DETECT)
-#define SPLIT_WATCHDOG_ENABLE
-#define SPLIT_WATCHDOG_TIMEOUT 2048
+//#define SPLIT_WATCHDOG_ENABLE
+//#define SPLIT_WATCHDOG_TIMEOUT 2048
 
 
 /* TRANSACTIONS */
@@ -95,7 +95,7 @@
 
 /* CRC8 */
 #define CRC8_OPTIMIZE_SPEED  // Use bigger memory operands if available hoping for faster CRC runs.
-#define CRC8_USE_TABLE  // This for some reason has disrupted the RPC on YD2040 for a couple of days..
+#define CRC8_USE_TABLE  // This for some reason disrupted the RPC on YD2040 for a couple of days..
 
 
 
