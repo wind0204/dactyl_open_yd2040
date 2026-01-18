@@ -24,7 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [QWERTY_LAYER] = LAYOUT_5x7(
         // left hand
         KC_GRAVE,  KC_1   ,   KC_2   ,   KC_3   ,   KC_4   ,   KC_5   ,  KC_6   ,
-        KC_TAB ,   KC_Q   ,   KC_W   ,   KC_E   ,   KC_R   ,   KC_T   ,  _______,
+        KC_TAB ,   KC_Q   ,   KC_W   ,   KC_E   ,   KC_R   ,   KC_T   ,  KC_UNDS,
         KC_CAPS,   KC_A   ,   KC_S   ,   KC_D   ,   KC_F   ,   KC_G   ,  KC_LBRC,
         KC_LSFT,   KC_Z   ,   KC_X   ,   KC_C   ,   KC_V   ,   KC_B   ,
         OSL(THIRD_LAYER), KC_ESC, KC_LEFT, KC_RGHT, KC_LALT,             KC_DEL , KC_MUTE,
@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // right hand ( inversed )
         KC_F12 ,   KC_F11 ,   KC_F10 ,   KC_F9  ,   KC_F8  ,   KC_F7  ,  KC_INS ,
         _______,   KC_PAUS,   _______,   _______,   _______,   _______,  _______,
-        _______,   _______,   _______,   _______,   _______,   _______,  _______,
+        _______,   _______,   _______,   KC_BTN2,   KC_BTN1,   KC_BTN3,  _______,
         _______,   _______,   _______,   _______,   KC_MENU,   _______,
         _______,   _______,   _______,   _______,   _______,             _______, _______,
                                                                 _______, _______, _______
