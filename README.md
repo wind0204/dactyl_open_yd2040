@@ -5,12 +5,16 @@ And thought I might as well share some of the details on the internet.
 <br>
 
 <img width="4080" height="3060" alt="sideview-microcontroller" src="https://github.com/user-attachments/assets/d662f2e7-cbfd-44f0-9889-d645539f1716" />
-WARNING: I think it was very difficult to connect `GP0` to the wire which in turn gets connected to the RJ10 connector `CRJ029-G-TH` when working on the right half-keyboard because the RJ10 connector was blocking the plated holes for `GP0`-`GP2`
+WARNING: I think it was very difficult to connect `GP0` to the wire which in turn gets connected to the RJ10 connector `CRJ029-G-TH` when working on the right half-keyboard because the RJ10 connector was blocking the plated holes for `GP0`-`GP2`.
 
+<br>
 <br>
 
 <img width="3060" height="4080" alt="topview" src="https://github.com/user-attachments/assets/4a289b91-64ac-405e-a6b6-2791f3635458" />
+WARNING: Because of the curvature, the user will often press a button in a diagonal direction instead of the direction of the gravity pull; The keyboard can slip forward/backward/sideways when you press in a diagonal direction too hard.
+This means you can't use medium or high actuation-force switches(around 55g+) on every key unless you somehow have obtained secure holds on the keyboard--e.g. very good rubber pad on the feet or a special modification on the feet that enables the keyboard to be attached to a heavy-duty arm.
 
+<br>
 <br>
 
 The MCUs I used were good value, I guess. I don't have the electronic knowledge to really evaluate it well. Its name was YD-2040 V1.1;
