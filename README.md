@@ -23,3 +23,8 @@ One tileboard on each thumb rack had to be ground on two sides; One side to make
 On qmk firmware, I made the keyboard emit a blue animated light on the right half whenever the numpad is not behaving as a numpad (Num Lock is off), and a green animated light on the left half whenever capslock is on, using the single WS2812 on YD2040 V1.1; I also made the keyboard write high on the blue LED on the left YD2040 whenever SECOND_LAYER is active and on the right YD2040 whenever N-Key Rollover is off.
 
 The minimum cost for such a project, without taking into consideration tools like solder, multimeter, crimper, etc.: https://docs.google.com/spreadsheets/d/1aFUHoXlercC7e-SuZfpWUTReEQ5fsc-MYpa9vlSZMmo/edit?usp=sharing
+
+<br>
+
+You need to short the input legs of the Schottky diode to connect Vin and VBUS. WARNING: This component is tiny!
+<img width="3060" height="4080" alt="shorted_bat54c_input_legs" src="https://github.com/user-attachments/assets/c98f25d6-944b-4ca7-9145-97c99a861d28" />
