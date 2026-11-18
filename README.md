@@ -12,7 +12,8 @@ WARNING: I think it was very difficult to connect `GP0` to the wire which in tur
 
 <img width="3060" height="4080" alt="topview" src="https://github.com/user-attachments/assets/4a289b91-64ac-405e-a6b6-2791f3635458" />
 WARNING: Because of the curvature, the user will often press a button in a diagonal direction instead of the direction of the gravity pull; The keyboard can slip forward/backward/sideways when you press in a diagonal direction too hard.
-This means you can't use medium or high actuation-force switches(around 55g+) on every key unless you somehow have obtained secure holds on the keyboard--e.g. very good rubber pad on the feet or a special modification on the feet that enables the keyboard to be attached to a heavy-duty arm.
+This means you can't use medium or high actuation-force switches(around 55g+) on every key on the keyboard unless you somehow have obtained secure holds on the keyboard--e.g. very good rubber pad on the feet or a special modification on the feet that enables the keyboard to be attached to a heavy-duty arm.
+I use Outemu Lime v3 (actuation force 35g) for the keys at the edge of the main frames, Gazzew U4 Black (bottom-out force 62g) for the keys on the thumb frames, and SPM&HMX Moksae Light Tactile (actuation force 37g) for the rest.
 
 <br>
 <br>
